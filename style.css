@@ -1,65 +1,63 @@
-/* Reset básico para padronizar os estilos entre navegadores */
+/* Tira as margens e os espaços padrões que o navegador coloca em tudo */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Faz com que o tamanho do elemento leve em conta as bordas e o padding */
   }
   
-  /* Variáveis CSS para reutilização de cores e tamanhos */
-  :root {
-    --primary: #0057ff;
-    --radius: 6px;
-  }
-  
-  /* Estilos globais para todo o corpo da página */
+  /* Estilo geral do corpo da página */
   body {
-    font-family: Arial, sans-serif;
-    background: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+    font-family: Arial, sans-serif; /* Fonte que vamos usar no site */
+    background-color: #ffffff;     /* Fundo branco */
+    color: #000000;                /* Letras pretas */
+    padding: 20px;                 /* Um espacinho dentro da página */
   }
   
-  /* Container principal com largura máxima e centralizado */
-  .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 24px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  /* Cabeçalho (topo da página) */
+  header {
+    text-align: center;            /* Centraliza o texto do topo */
+    margin-bottom: 30px;          /* Dá um espaço depois do cabeçalho */
   }
   
-  /* Cabeçalho com fundo azul e texto branco */
-  .header {
-    background-color: var(--primary);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  /* Título principal do site */
+  header h1 {
+    font-size: 2rem;               /* Tamanho da fonte do título */
+    color: #1a1a1a;                /* Cor escura pro título */
   }
   
-  /* Estilo do título principal */
-  .title {
-    margin: 0;
+  /* Parte que segura todos os cards */
+  .card-container {
+    display: flex;                 /* Coloca os cards lado a lado */
+    gap: 20px;                     /* Espaço entre eles */
+    justify-content: center;      /* Centraliza os cards na tela */
+    flex-wrap: wrap;              /* Em telas pequenas, os cards quebram pra baixo */
   }
   
-  /* Cartão que envolve conteúdo */
+  /* Estilo de cada card */
   .card {
-    margin-top: 20px;
+    background-color: #ffffff;    /* Fundo branco do card */
+    padding: 20px;                /* Espaço interno no card */
+    border-radius: 12px;          /* Cantinhos arredondados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra pra dar destaque */
+    flex: 1 1 300px;              /* O card cresce, mas nunca fica menor que 300px */
+    max-width: 500px;             /* Mas também não passa de 500px */
   }
   
-  /* Estilização do botão com cor e borda arredondada */
-  .button {
-    background: var(--primary);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: var(--radius);
-    cursor: pointer;
+  /* Título dentro do card */
+  .card h2 {
+    font-size: 1.5rem;            /* Tamanho da fonte do subtítulo */
+    margin-bottom: 10px;         /* Espaço depois do título */
+    color: #000000;               /* Cor preta */
   }
   
-  /* Responsividade para telas pequenas */
-  @media (max-width: 600px) {
-    .container {
-      padding: 12px;
-    }
+  /* Texto dentro do card */
+  .card p {
+    font-size: 1rem;              /* Tamanho normal do texto */
+    line-height: 1.6;             /* Deixa as linhas com mais espaço pra facilitar a leitura */
   }
+  
+  /* Estilo das imagens nos cards */
+  .card img {
+    width: 100%;                  /* A imagem ocupa toda a largura do card */
+    height
+  }  
